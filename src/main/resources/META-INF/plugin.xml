@@ -1,0 +1,40 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.tsingin.kt2ts</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Kotlin into Typescript</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="leonsafi@foxmali.com" url="https://www.tsingin.com">TsingIn</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    This IntelliJ plugin, written in Kotlin, is designed to convert Kotlin controller methods into TypeScript interfaces. When a user right - clicks on a Kotlin method within a `RestController` or `Controller` class, the plugin parses the Kotlin method, including HTTP mapping annotations, method paths, and parameter types. It then generates corresponding TypeScript code, which includes interface definitions for input and output parameters, as well as a function definition for the HTTP request. The generated TypeScript code is automatically copied to the clipboard, and the plugin can handle dynamic path placeholders and basic Kotlin type conversions to TypeScript types.<br>
+<em>It provides a convenient way for developers to convert Kotlin - based backend controller methods into TypeScript - based front - end code, enhancing development efficiency and reducing the risk of errors.</em>
+
+这个用 Kotlin 编写的 IntelliJ 插件旨在将 Kotlin 控制器方法转换为 TypeScript 接口。当用户在 `RestController` 或 `Controller` 类中的 Kotlin 方法上右键点击时，插件会解析该 Kotlin 方法，包括 HTTP 映射注解、方法路径和参数类型。然后生成相应的 TypeScript 代码，其中包含输入和输出参数的接口定义，以及 HTTP 请求的函数定义。生成的 TypeScript 代码会自动复制到剪贴板，并且该插件可以处理动态路径占位符以及将基本的 Kotlin 类型转换为 TypeScript 类型。<br>
+<em>它为开发者提供了一种便捷的方式，将基于 Kotlin 的后端控制器方法转换为基于 TypeScript 的前端代码，提高了开发效率并降低了出错的风险。</em>
+]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        <action class="com.tsingin.kt2ts.KtMethod2TypeScriptAction" id="KtMethod2TypeScriptAction"
+                icon="AllIcons.Actions.EnableNewUi" text="Generate TypeScript Interface"
+                description="Generate typeScript Interface">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>

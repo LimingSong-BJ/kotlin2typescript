@@ -1,0 +1,23 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 左熊猫眼圈（Kotlin 元素） -->
+    <path d="M7 22 C9 17, 17 13, 21 16 C17 25, 9 23, 7 22 Z" fill="url(#kotlinGradient)" />
+    <!-- 右熊猫眼圈（TypeScript 元素） -->
+    <path d="M33 22 C31 17, 23 13, 20 21 C23 25, 31 23, 33 22 Z" fill="url(#typescriptGradient)" />
+
+    <defs>
+        <!-- Kotlin 渐变 -->
+        <linearGradient id="kotlinGradient" x1="7" y1="17" x2="20" y2="25" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#7F52FF" />
+            <stop offset="0.3" stop-color="#FF87B0" />
+            <stop offset="0.7" stop-color="#FFB6C1" />
+            <stop offset="1" stop-color="#FFD1DC" />
+        </linearGradient>
+        <!-- TypeScript 渐变 -->
+        <linearGradient id="typescriptGradient" x1="33" y1="17" x2="20" y2="25" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#007ACC" />
+            <stop offset="0.3" stop-color="#3178C6" />
+            <stop offset="0.7" stop-color="#66A3FF" />
+            <stop offset="1" stop-color="#99CCFF" />
+        </linearGradient>
+    </defs>
+</svg>
