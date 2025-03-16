@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.tsingin"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -19,6 +19,7 @@ intellij {
 
     plugins.set(listOf("org.jetbrains.kotlin"))
 }
+
 
 tasks {
     // Set the JVM compatibility versions
